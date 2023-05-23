@@ -82,16 +82,16 @@ document.addEventListener("keyup", function(event) {
       playIntroMusic();
       introMusicPlayed = true;
   }
-  if ((event.key === "ArrowRight" || "D") && grid[pacman.y][pacman.x + 1] !== 2) {
+  if ((event.key === "ArrowRight" || event.key === "d") && grid[pacman.y][pacman.x + 1] !== 2) {
       newX += 1;
       rotation = 0;
-  } else if (event.key === "ArrowLeft" && grid[pacman.y][pacman.x - 1] !== 2) {
+  } else if( (event.key === "ArrowLeft" || event.key === "a") && grid[pacman.y][pacman.x - 1] !== 2) {
       newX -= 1;
       rotation = 180;
-  } else if (event.key === "ArrowUp" && grid[pacman.y - 1][pacman.x] !== 2) {
+  } else if ((event.key === "ArrowUp" || event.key === "w") && grid[pacman.y - 1][pacman.x] !== 2) {
       newY -= 1;
       rotation = 270;
-  } else if (event.key === "ArrowDown" && grid[pacman.y + 1][pacman.x] !== 2) {
+  } else if ((event.key === "ArrowDown" || event.key === "s") && grid[pacman.y + 1][pacman.x] !== 2) {
       newY += 1;
       rotation = 90;
   }
@@ -109,5 +109,7 @@ document.addEventListener("keyup", function(event) {
       pac_style.transform = `rotate(${rotation}deg)`;
       initialize();
   }
+
+});
 
 });
