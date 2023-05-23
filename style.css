@@ -1,0 +1,198 @@
+body{
+    margin: 0px ;
+    padding: 0px;
+    background-color: black;
+}
+#logo{
+    position: absolute;
+    margin-left: 535px;
+    margin-top: -60px;
+}
+.star{
+    width: 20px;
+    height: 20px;
+    border: 2pt solid black;
+    display: inline-flex;
+    background-image: url(images/star.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+h1{
+    font-size: 30pt;
+    color: blueviolet;
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    margin-top: 20%;
+    margin-left: 1000px;
+}
+
+#container{
+    display: inline-block;
+    border: 2pt solid black;
+    margin-top: 100px;
+    margin-left: 500px;
+    transition: 800ms;
+}
+
+#pacman{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(images/pacman.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 20px;
+    left: 20px;
+    transition: 200ms;
+    margin-top: 100px;
+    margin-left: 500px;
+
+}
+#ghost1{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(images/ghost.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 20px;
+    left: 20px;
+    transition: 200ms;
+    margin-top: 100px;
+    margin-left: 500px;
+
+    
+}
+#ghost2{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(images/N0f.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 20px;
+    left: 20px;
+    transition: 200ms;
+    margin-top: 100px;
+    margin-left: 500px;
+
+    
+}
+#ghost3{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(images/YMXv.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 20px;
+    left: 20px;
+    transition: 200ms;
+    margin-top: 100px;
+    margin-left: 500px;
+
+    
+}
+#plus100 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: red;
+    animation: moveAcrossScreen 3s linear;
+  }
+  @keyframes moveAcrossScreen {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(calc(100% + 100px));
+      opacity: 0;
+    }
+  }
+  
+ 
+    
+
+#ghost4{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-image: url(images/blue.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 20px;
+    left: 20px;
+    transition: 200ms;
+    margin-top: 100px;
+    margin-left: 500px;
+    
+}
+.brick{
+    width: 20px;
+    height: 20px;
+    border: 2pt solid black;
+    display: inline-block;
+    background-color: blue;
+    padding: 0px;
+    margin: 0px auto;
+}
+.empty{
+    width: 20px;
+    height: 20px;
+    border: 2pt solid black;
+    display: inline-block;
+    background-color: black;
+    padding: 0px;
+    margin: 0px auto;
+}
+.row{
+    margin: 0px auto;
+    padding: 0px;
+    
+}
+.coin{
+    width: 20px;
+    height: 20px;
+    border: 2pt solid black;
+    display: inline-flex;
+    background-image: url(images/coin.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#scorex{
+    color: antiquewhite;
+    font-size: 20pt;
+    margin-left: 500px;
+    margin-top: 10px;
+    position: rel;
+}
+#gameover{
+    position: absolute;
+    font-size: 50pt;
+    color: red;
+    margin-left: 500px;
+    margin-top: 20%;
+    display: none;
+    transition: 800ms;
+    
+}
+#rdy{
+    position: absolute;
+    font-size: 50pt;
+    color: white;
+    margin: 10%;
+    margin-top: 20%;
+    display: flex;
+    
+}
