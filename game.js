@@ -73,7 +73,7 @@ setInterval(() => {
 }, 300);
 initialize()
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keyup", function(event) {
   let newX = pacman.x;
   let newY = pacman.y;
   let rotation = 0;
@@ -82,7 +82,7 @@ document.addEventListener("keydown", function(event) {
       playIntroMusic();
       introMusicPlayed = true;
   }
-  if (event.key === "ArrowRight" && grid[pacman.y][pacman.x + 1] !== 2) {
+  if ((event.key === "ArrowRight" || "D") && grid[pacman.y][pacman.x + 1] !== 2) {
       newX += 1;
       rotation = 0;
   } else if (event.key === "ArrowLeft" && grid[pacman.y][pacman.x - 1] !== 2) {
