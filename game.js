@@ -48,7 +48,7 @@ setInterval(() => {
       const ghostObj = ghosts[i];
       lossCheck(ghostObj.style, ghostObj.tagged);
   }
-}, 10);
+}, 100);
 
 setInterval(() => {
   for (let i = 0; i < ghosts.length; i++) {
