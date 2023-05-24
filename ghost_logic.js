@@ -18,8 +18,7 @@ export function hideAllGhosts() {
 }
 export let  lost = false,
             star = true,
-            spin = 0,
-            score = 0
+            spin = 0
 
 
 
