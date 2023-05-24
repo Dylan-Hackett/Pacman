@@ -54,6 +54,11 @@ setInterval(() => {
 }, 300);
 
 setInterval(() => {
+      document.getElementById('score').innerText = score1 + score2
+  
+}, 10);
+
+setInterval(() => {
   for (let i = 0; i < ghosts.length; i++) {
       const ghostObj = ghosts[i];
       ghostObj.ghost.last_dir = parseInt(Math.random() * 4);
