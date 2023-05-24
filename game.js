@@ -51,7 +51,7 @@ setInterval(() => {
       lossCheck(ghostObj.style, ghostObj.tagged);
       document.getElementById('score').innerText = score1 + score2
   }
-}, 300);
+}, 400);
 
 setInterval(() => {
       document.getElementById('score').innerText = score1 + score2
