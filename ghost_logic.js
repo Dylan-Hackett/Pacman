@@ -19,7 +19,7 @@ export function hideAllGhosts() {
 export let  lost = false,
             star = true,
             spin = 0,
-            score = 0
+            score2 = 0
 
 
 export function flashPlus100() {
@@ -27,8 +27,7 @@ export function flashPlus100() {
     plus100Div.id = 'plus100';
     plus100Div.textContent = '+100';
     plus100Div.classList.add('flash-animation');
-    score+= 100
-    document.getElementById('score').innerText = score
+    score2+= 100
     document.body.appendChild(plus100Div);
     const duration = parseInt(Math.random()*3000)
     setTimeout(function() {

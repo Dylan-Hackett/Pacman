@@ -1,4 +1,4 @@
-let  score = 0
+export let  score1 = 0
 import {
     container,
     pac_style,
@@ -40,8 +40,7 @@ export function displayPac(){
 export function coinCheck(){
     if(grid[pacman.y][pacman.x] === 1 || grid[pacman.y][pacman.x] === 3){
         grid[pacman.y][pacman.x] = 0
-        score+= 10
-        document.getElementById('score').innerText = score
+        score1+= 10
         
     }
 }

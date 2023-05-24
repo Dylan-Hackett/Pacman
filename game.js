@@ -9,12 +9,14 @@ import {
 
 import {
   ghosted,
-  hideAllGhosts
+  hideAllGhosts,
+  score2
 } from './ghost_logic.js';
 
 import {
   initialize,
   playIntroMusic,
+  score1
 } from './pac_logic.js';
 
 export let  lost = false,
@@ -47,8 +49,9 @@ setInterval(() => {
   for (let i = 0; i < ghosts.length; i++) {
       const ghostObj = ghosts[i];
       lossCheck(ghostObj.style, ghostObj.tagged);
+      document.getElementById('score').innerText = score1 + score2
   }
-}, 600);
+}, 300);
 
 setInterval(() => {
   for (let i = 0; i < ghosts.length; i++) {
@@ -77,6 +80,7 @@ document.addEventListener("keyup", function(event) {
   let newX = pacman.x;
   let newY = pacman.y;
   let rotation = 0;
+  
 
   if (!introMusicPlayed) {
       playIntroMusic();
