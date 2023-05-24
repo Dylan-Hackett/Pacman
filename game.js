@@ -78,7 +78,7 @@ setInterval(() => {
       spin += 360;
       container.style.transform = 'rotate(' + spin + 'deg)';
   }
-}, 300);
+}, 30);
 initialize()
 
 document.addEventListener("keyup", function(event) {
