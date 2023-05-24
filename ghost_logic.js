@@ -64,7 +64,14 @@ export function ghosted(ghost, ghost_x, ghost_y, last_dir, ghost_style, tagged, 
         ghost_style.backgroundImage = 'url(images/tagged.gif)';
         if((Math.abs(ghost_x-pac_x)<2) && (Math.abs(ghost_y-pac_y)<2)){
             ghost_y = 1
-            ghost_x = parseInt(Math.random() * 10 + 1);
+            if (pac_x > 5){
+                ghost_x = 1
+            }
+            else{
+                ghost_x = 12
+            }
+            
+            
             flashPlus100();
             ghost_style.backgroundImage =  `url(images/${imgname}.gif)`
             ghost.tagged = false

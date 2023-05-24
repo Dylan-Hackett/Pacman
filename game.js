@@ -48,7 +48,7 @@ setInterval(() => {
       const ghostObj = ghosts[i];
       lossCheck(ghostObj.style, ghostObj.tagged);
   }
-}, 10);
+}, 600);
 
 setInterval(() => {
   for (let i = 0; i < ghosts.length; i++) {
@@ -73,7 +73,7 @@ setInterval(() => {
 }, 300);
 initialize()
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keyup", function(event) {
   let newX = pacman.x;
   let newY = pacman.y;
   let rotation = 0;
@@ -82,16 +82,16 @@ document.addEventListener("keydown", function(event) {
       playIntroMusic();
       introMusicPlayed = true;
   }
-  if (event.key === "ArrowRight" && grid[pacman.y][pacman.x + 1] !== 2) {
+  if ((event.key === "ArrowRight" || event.key === "d") && grid[pacman.y][pacman.x + 1] !== 2) {
       newX += 1;
       rotation = 0;
-  } else if (event.key === "ArrowLeft" && grid[pacman.y][pacman.x - 1] !== 2) {
+  } else if( (event.key === "ArrowLeft" || event.key === "a") && grid[pacman.y][pacman.x - 1] !== 2) {
       newX -= 1;
       rotation = 180;
-  } else if (event.key === "ArrowUp" && grid[pacman.y - 1][pacman.x] !== 2) {
+  } else if ((event.key === "ArrowUp" || event.key === "w") && grid[pacman.y - 1][pacman.x] !== 2) {
       newY -= 1;
       rotation = 270;
-  } else if (event.key === "ArrowDown" && grid[pacman.y + 1][pacman.x] !== 2) {
+  } else if ((event.key === "ArrowDown" || event.key === "s") && grid[pacman.y + 1][pacman.x] !== 2) {
       newY += 1;
       rotation = 90;
   }
