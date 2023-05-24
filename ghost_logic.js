@@ -22,19 +22,7 @@ export let  lost = false,
             score = 0
 
 
-export function flashPlus100() {
-    const plus100Div = document.createElement('div');
-    plus100Div.id = 'plus100';
-    plus100Div.textContent = '+100';
-    plus100Div.classList.add('flash-animation');
-    score+= 100
-    document.getElementById('score').innerText = score
-    document.body.appendChild(plus100Div);
-    const duration = parseInt(Math.random()*3000)
-    setTimeout(function() {
-        plus100Div.remove();
-    }, 400);
-    }
+
 export function ghosted(ghost, ghost_x, ghost_y, last_dir, ghost_style, tagged, imgname) {
     var pac_x = pacman.x; 
     var pac_y = pacman.y; 
