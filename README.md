@@ -1,4 +1,4 @@
-# [Pacman!](https://dylan-hackett.github.io/Pacman/)
+# [Pacman! - (play here)](https://dylan-hackett.github.io/Pacman/)
 
 This is an implementation of **Pacman** using HTML,CSS, and JavaScript(and some images from the Super MARIO world!) 
 ## Program Details
